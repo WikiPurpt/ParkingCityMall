@@ -1,0 +1,4 @@
+p1=true
+p2=false
+p3=false
+p4=true

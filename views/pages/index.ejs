@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description" />
+    <meta name="author" content="Your name" />
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="" />
+    <!-- website name -->
+    <meta property="og:site" content="" />
+    <!-- website link -->
+    <meta property="og:title" content="" />
+    <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" />
+    <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" />
+    <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>SPark: Smart Parking</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="./css/aos.min.css" rel="stylesheet" />
+    <link href="./css/swiper.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/app.css">
+    <script src="/js/app.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/favicon.png" />
+  </head>
+  <body>
+    <div>
+      <nav
+        id="navbar"
+        class="navbar navbar-expand-lg fixed-top navbar-dark"
+        aria-label="Main navigation"
+      >
+        <div class="container">
+          <!-- Image Logo -->
+          <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
+
+          <!-- Text Logo - Use this if you don't have a graphic logo -->
+          <a class="navbar-brand logo-text logo-image" href="/"
+            ><img src="/assets/images/favicon.png" alt="" class="img-fluid" />
+            SPark: Smart Parking System</a
+          >
+
+          <button
+            class="navbar-toggler p-0 border-0"
+            type="button"
+            id="navbarSideCollapse"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="navbar-collapse offcanvas-collapse"
+            id="navbarsExampleDefault"
+          >
+            <ul class="navbar-nav ms-auto navbar-nav-scroll">
+              <li class="nav-item">
+                <a class="nav-link scrollto active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#about">Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#menu">System</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/aboutus">About Us</a>
+              </li>
+            </ul>
+            <span class="nav-item social-icons">
+              <span class="fa-stack">
+                <a href="https://www.facebook.com/CMTagum" target="_blank">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x"></i>
+                </a>
+              </span>
+            </span>
+          </div>
+          <!-- end of navbar-collapse -->
+        </div>
+        <!-- end of container -->
+      </nav>
+      <!-- end of navbar -->
+      <!-- end of navigation -->
+
+      <!-- Home -->
+      <center>
+        <section class="home py-5 d-flex align-items-center" id="#Home">
+          <div class="container text-light py-5" data-aos="zoom-in">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <div>
+              <a class="btn" href="#menu"><b>Navigate to system</b></a>
+            </div>
+          </div>
+          <!-- end of container -->
+        </section>
+        <!-- end of home -->
+      </center>
+
+      <!-- Information -->
+      <section class="information" id="about">
+        <div class="container-fluid">
+          <div class="row text-light">
+            <div class="col-lg-4 text-center p-5 text-dark"></div>
+            <div class="col-lg-4 text-center p-5">
+              <h1 id="Available" class="py-3">0</h1>
+              <p id="avail"class="para-light">
+                Parking Space Available
+              </p>
+              <h4 class="py-3">CAMERA LOCATION</h4>
+              <p class="para-light">
+                
+              </p>
+            </div>
+            <div class="col-lg-4 text-center p-5 text-dark"></div>
+          </div>
+        </div>
+        <!-- end of container -->
+      </section>
+      <!-- end of information -->
+
+      <!-- About -->
+      <section class="about d-flex align-items-center text-light py-1">
+        <div class="container">
+          <div class="col-md-6 offset-md-3">
+            <div class="text-center">
+              <img class="responsive map" src="./assets/images/map.jpg" />
+            </div>
+            <br /><br /><br />
+          </div>
+        </div>
+        <!-- end of container -->
+      </section>
+      <!-- end of about -->
+
+      <section>
+        <!-- Services -->
+        <!-- Menu Container -->
+        <div class="w3-container w3-padding-64 w3-xxlarge" id="menu">
+          <div class="w3-content">
+            <h1
+              class="w3-center w3-jumbo"
+              style="margin-bottom: 64px; color: white"
+            >
+              SYSTEM
+            </h1>
+            <h4 class="w3-center w3" style="color: white">
+              Mall Map Blueprint
+            </h4>
+            <div class="mb-4" style="width: 100%; height: 300px">
+              <img
+                class="text-center"
+                src="/assets/images/citymall_blueprint.jpg"
+                alt=""
+                style="width: 100%; height: 100%; object-fit: contain"
+              />
+            </div>
+            <div class="w3-row w3-center w3-border w3-border-dark-grey map">
+              <a
+                href="javascript:void(0)"
+                onclick="openMenu(event, 'Pizza');"
+                id="myLink"
+              >
+                <div
+                  class="w3-col s4 tablink w3-padding-large w3-hover-red map"
+                >
+                  AREA 1
+                </div>
+              </a>
+              <a href="javascript:void(0)">
+                <div class="w3-col s4 tablink w3-padding-large"></div>
+              </a>
+              <a
+                href="javascript:void(0)"
+                onclick="openMenu(event, 'Starter');"
+              >
+                <div
+                  class="w3-col s4 tablink w3-padding-large w3-hover-red map"
+                >
+                  AREA 2
+                </div>
+              </a>
+            </div>
+
+            <div 
+            id="Pizza"
+            class="w3-container menu w3-padding-32 w3-white maps" style="overflow-x: scroll;">
+                <div 
+                style="background-image: url(/assets/images/parking_A1.jpg); height: 400px; width: 990px; background-size: cover; padding-top: 100px;"
+                >
+                    <div class="p-0" style="margin-left: 90px;width: 850px;height: 250px;">          
+                        <div id="p1" class="parking-space text-center display-inline">
+                                P1
+                        </div>          
+                        <div id="p2" class="parking-space text-center display-inline">
+                                P2
+                        </div>          
+                        <div id="p3" class="parking-space text-center display-inline">
+                                P3
+                        </div>          
+                        <div id="p4" class="parking-space text-center display-inline">
+                                P4
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+              <h1>
+                <b>Coming Soon...</b>
+                <span class="w3-tag w3-grey w3-round"></span
+                ><span class="w3-right w3-tag w3-dark-grey w3-round"></span>
+              </h1>
+              <p class="w3-text-grey"></p>
+              <hr />
+            </div>
+            <br />
+          </div>
+        </div>
+      </section>
+      <!-- end of services -->
+
+      <!-- Bottom -->
+      <div class="bottom py-2 text-light">
+        <div class="container d-flex justify-content-between">
+          <div>
+            <p>City Mall of Tagum</p>
+            <br />
+            <p>
+              Distributed by: Z2558
+            </p>
+          </div>
+          
+        </div>
+        <!-- end of container -->
+      </div>
+      <!-- end of bottom -->
+
+      <!-- Scripts -->
+      <script src="/js/bootstrap.min.js"></script>
+      <!-- Bootstrap framework -->
+      <script src="/js/purecounter.min.js"></script>
+      <!-- Purecounter counter for statistics numbers -->
+      <script src="/js/swiper.min.js"></script>
+      <!-- Swiper for image and text sliders -->
+      <script src="/js/aos.js"></script>
+      <!-- AOS on Animation Scroll -->
+      <script src="/js/script.js"></script>
+      <!-- Custom scripts -->
+      <script>
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+          var i, x, tablinks;
+          x = document.getElementsByClassName("menu");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(
+              " w3-red",
+              ""
+            );
+          }
+          document.getElementById(menuName).style.display = "block";
+          evt.currentTarget.firstElementChild.className += " w3-black";
+        }
+        document.getElementById("myLink").click();
+      </script>
+      <script>
+        async function getData(){
+            var data = await $.get('/get-parking-names', async (reply) => {
+                return await reply
+            })
+            $('#output').text('The Parking details:')
+            console.log(data.names)
+            for(let i = 0; i < data.names.length; i++){
+                console.log(data.names[i])
+                var value = await $.get('/get-parking-availabilty?name=' + data.names[i], async (reply) => {
+                    return await reply
+                })
+                $('#output').text($('#output').text() + "\n" + data.names[i] + " is " + value.availability)
+                if(parseInt(value.availability) > -1){
+                    $('#Available').text(value.availability)
+                   
+                }
+            }
+        }
+        var intervalId = window.setInterval(function(){
+            getData()
+        }, 1000);
+    </script>
+      
+      
+      
+    </div>
+  </body>
+</html>

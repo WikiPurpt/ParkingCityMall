@@ -1,0 +1,22 @@
+.parking-space{
+    width: 100px;
+    height: 150px;
+    line-height: 150px;
+    background-color: gray;
+}
+
+.available {
+    background-color: green;
+}
+
+.not-available {
+    background-color: red;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.display-inline {
+    display: inline-block;
+}

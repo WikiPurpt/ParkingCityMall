@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description" />
+    <meta name="author" content="Your name" />
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="" />
+    <!-- website name -->
+    <meta property="og:site" content="" />
+    <!-- website link -->
+    <meta property="og:title" content="" />
+    <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" />
+    <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" />
+    <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>Dashboard - SPark: Smart Parking</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="./css/aos.min.css" rel="stylesheet" />
+    <link href="./css/swiper.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <script src="/js/app.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/favicon.png" />
+
+    <style>
+      .anim{
+        height: 0%;
+        transition: all 2s ease-out;
+      }
+      @media(max-width: 700px){
+        .desktop-only{
+          display: none;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    <div>
+      <nav
+        id="navbar"
+        class="navbar navbar-expand-lg fixed-top navbar-dark"
+        aria-label="Main navigation"
+      >
+        <div class="container">
+          <!-- Image Logo -->
+          <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
+
+          <!-- Text Logo - Use this if you don't have a graphic logo -->
+          <a class="navbar-brand logo-text logo-image" href="/"
+            ><img src="/assets/images/favicon.png" alt="" class="img-fluid" />
+            SPark: Smart Parking System</a
+          >
+
+          <button
+            class="navbar-toggler p-0 border-0"
+            type="button"
+            id="navbarSideCollapse"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="navbar-collapse offcanvas-collapse"
+            id="navbarsExampleDefault"
+          >
+            <ul class="navbar-nav ms-auto navbar-nav-scroll">
+              <li class="nav-item">
+                <a class="nav-link scrollto active" href="/#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="/#about">Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="/#menu">System</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/aboutus">About Us</a>
+              </li>
+              
+            </ul>
+            <span class="nav-item social-icons">
+              <span class="fa-stack">
+                <a href="https://www.facebook.com/CMTagum" target="_blank"> 
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x"></i>
+                </a>
+              </span>
+            </span>
+          </div>
+          <!-- end of navbar-collapse -->
+        </div>
+        <!-- end of container -->
+      </nav>
+      <!-- end of navbar -->
+      <!-- end of navigation -->
+
+      <!-- Home -->
+      <center>
+        <section class="home py-5 d-flex align-items-center" id="#Home">
+          <div class="container text-light py-5" data-aos="zoom-in">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br />
+          </div>
+          <!-- end of container -->
+        </section>
+        <!-- end of home -->
+      </center>
+
+      <!-- Information -->
+      <section class="p-5" style="background-color: #212d37; height: auto;">
+        <div class="p-3 pt-5 m-0 border rounded">
+          <div class="w-100 m-0 p-0 text-center">
+            <h3 class="mb-3 text-white">Dashboard</h3>
+          </div>
+          <div class="form-group w-25 text-left">
+            <label class="text-white" for="date">Enter Date</label>
+            <input onchange="showStatistics()" type="date" class="form-control" id="date" />
+          </div>
+          <div class="w-100 mt-2 p-4 rounded border row text-white mx-auto">
+
+            <div class="col-md-4 col-12 pt-2">
+              <div class="p-4 rounded text-center mx-2">
+                <h1 class="mx-auto" id="today" style="border-bottom: solid 7px white; width: fit-content;">1</h1>
+                <h6>Cars Parked<br>&nbsp;</h6>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-12 pt-2">
+              <div class="p-4 rounded text-center mx-2">
+                <h1 class="mx-auto" id="yesterday" style="border-bottom: solid 7px white; width: fit-content;">1</h1>
+                <h5><span id="yesterday-extra">1</span> cars</h5>
+                <h6>Cars Parked since yesterday</h6>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-12 pt-2">
+              <div class="p-4 rounded text-center mx-2">
+                <h1 class="mx-auto" id="twoDays" style="border-bottom: solid 7px white; width: fit-content;">1</h1>
+                <h5><span id="twoDays-extra">1</span> cars</h5>
+                <h6>Cars Parked since 2 days ago</h6>
+              </div>
+            </div>
+
+            <div class="col-12 pt-2">
+              <div class="p-4 rounded text-center mx-2">
+                <h1 class="mx-auto" id="month" style="border-bottom: solid 7px white; width: fit-content;">1</h1>
+                <h6>Cars Parked this month</h6>
+              </div>
+            </div>
+
+            <div class="col-12 bg-dark rounded p-3 desktop-only">
+
+              <div class="row mb-4">
+                <div class="col-1"></div>
+                <div class="col-11 row">
+                  <div class="col-1">Jan</div>
+                  <div class="col-1">Feb</div>
+                  <div class="col-1">Mar</div>
+                  <div class="col-1">Apr</div>
+                  <div class="col-1">May</div>
+                  <div class="col-1">Jun</div>
+                  <div class="col-1">Jul</div>
+                  <div class="col-1">Aug</div>
+                  <div class="col-1">Sep</div>
+                  <div class="col-1">Oct</div>
+                  <div class="col-1">Nov</div>
+                  <div class="col-1">Dec</div>
+                </div>
+              </div>
+
+              <div class="row" style="margin-bottom: -290px;">
+                <div class="col-1"></div>
+                <div class="col-11 row">
+                  <div class="col-1" style="height:275px">
+                    <div id="jan" class="bg-white w-50 anim" ></div>
+                  </div>
+                  <div class="col-1" style="height:275px">
+                    <div id="feb" class="bg-white w-50 anim" ></div>
+                  </div>
+                  <div class="col-1" style="height:275px">
+                    <div id="mar" class="bg-white w-50 anim" ></div>
+                  </div>
+                  <div class="col-1" style="height:275px">
+                    <div id="apr" class="bg-white w-50 anim" ></div>
+                  </div>
+                  <div class="col-1" style="height:275px">
+                    <div id="may" class="bg-white w-50 anim" ></div>
+                  </div>
+                  <div class="col-1" style="height:275px">
+                    <div id="jun" class="bg-white w-50 anim" ></div>
+                  </div>
+                  <div class="col-1" style="height:275px">
+                    <div id="jul" class="bg-white w-50 anim" ></div>
+                  </div>
+                  <div class="col-1" style="height:275px">
+                    <div id="aug" class="bg-white w-50 anim" ></div>
+                  </div>
+                  <div class="col-1" style="height:275px">
+                    <div id="sep" class="bg-white w-50 anim" ></div>
+                  </div>
+                  <div class="col-1" style="height:275px">
+                    <div id="oct" class="bg-white w-50 anim" ></div>
+                  </div>
+                  <div class="col-1" style="height:275px">
+                    <div id="nov" class="bg-white w-50 anim" ></div>
+                  </div>
+                  <div class="col-1" style="height:275px">
+                    <div id="dec" class="bg-white w-50 anim" ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-1">
+                  <p class="mb-4">0</p>
+                  <p class="mb-4">100</p>
+                  <p class="mb-4">200</p>
+                  <p class="mb-4">300</p>
+                  <p class="mb-4">400</p>
+                  <p class="mb-4">500</p>
+                  <p class="mb-4">600</p>
+                </div>
+                <div class="col-11">
+                  <hr class="mb-5" style="width: 100%;">
+                  <hr class="mb-5" style="width: 100%;">
+                  <hr class="mb-5" style="width: 100%;">
+                  <hr class="mb-5" style="width: 100%;">
+                  <hr class="mb-5" style="width: 100%;">
+                  <hr class="mb-5" style="width: 100%;">
+                  <hr class="mb-5" style="width: 100%;">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <script>
+
+            document.getElementById("date").valueAsDate = new Date();
+
+            function showStatistics() {
+              var date = $("#date").val();
+              getStatistics(date)
+            }
+
+            $(async () => {
+              var date = $("#date").val();
+              getStatistics(date)
+            })
+
+            async function getStatistics(date){
+              var data = await $.get('/get-statistics?date=' + date, async (data) => {
+                return await data
+              })
+              const today = document.getElementById('today')
+              const yesterday = document.getElementById('yesterday')
+              const yesterday_extra = document.getElementById('yesterday-extra')
+              const twoDays_extra = document.getElementById('twoDays-extra')
+              const month = document.getElementById('month')
+
+              animateValue(today, 0, data.today, 1000)
+              animateValue(yesterday, 0, data.yesterday + data.today, 1500)
+              animateValue(yesterday_extra, 0, data.yesterday, 1500)
+              animateValue(twoDays, 0, data.twoDays + data.today + data.yesterday, 2000)
+              animateValue(twoDays_extra, 0, data.twoDays, 2000)
+              animateValue(month, 0, data.month, 3000)
+
+              processMonths(data)
+            }
+
+            function processMonths(data){
+              var maxVal = 600
+              document.getElementById('jan').style.height = `${(data.jan / maxVal) * 100}%`
+              document.getElementById('feb').style.height = `${(data.feb / maxVal) * 100}%`
+              document.getElementById('mar').style.height = `${(data.mar / maxVal) * 100}%`
+              document.getElementById('apr').style.height = `${(data.apr / maxVal) * 100}%`
+              document.getElementById('may').style.height = `${(data.may / maxVal) * 100}%`
+              document.getElementById('jun').style.height = `${(data.jun / maxVal) * 100}%`
+              document.getElementById('jul').style.height = `${(data.jul / maxVal) * 100}%`
+              document.getElementById('aug').style.height = `${(data.aug / maxVal) * 100}%`
+              document.getElementById('sep').style.height = `${(data.sep / maxVal) * 100}%`
+              document.getElementById('oct').style.height = `${(data.oct / maxVal) * 100}%`
+              document.getElementById('nov').style.height = `${(data.nov / maxVal) * 100}%`
+              document.getElementById('dec').style.height = `${(data.dec / maxVal) * 100}%`
+            }
+
+            function animateValue(obj, start, end, duration) {
+              let startTimestamp = null;
+              const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                  window.requestAnimationFrame(step);
+                }
+              };
+              window.requestAnimationFrame(step);
+            }
+          </script>
+        </div>
+        <!-- end of container -->
+      </section>
+      <!-- end of about -->
+      <!-- end of bottom -->
+
+      <!-- Scripts -->
+      <script src="/js/bootstrap.min.js"></script>
+      <!-- Bootstrap framework -->
+      <script src="/js/purecounter.min.js"></script>
+      <!-- Purecounter counter for statistics numbers -->
+      <script src="/js/swiper.min.js"></script>
+      <!-- Swiper for image and text sliders -->
+      <script src="/js/aos.js"></script>
+      <!-- AOS on Animation Scroll -->
+      <script src="/js/script.js"></script>
+      <!-- Custom scripts -->
+      <script>
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+          var i, x, tablinks;
+          x = document.getElementsByClassName("menu");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(
+              " w3-red",
+              ""
+            );
+          }
+          document.getElementById(menuName).style.display = "block";
+          evt.currentTarget.firstElementChild.className += " w3-black";
+        }
+        // document.getElementById("myLink").click();
+      </script>
+    </div>
+  </body>
+</html>

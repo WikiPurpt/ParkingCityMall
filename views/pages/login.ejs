@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+    
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Your description" />
+        <meta name="author" content="Your name" />
+    
+        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+        <meta property="og:site_name" content="" />
+        <!-- website name -->
+        <meta property="og:site" content="" />
+        <!-- website link -->
+        <meta property="og:title" content="" />
+        <!-- title shown in the actual shared post -->
+        <meta property="og:description" content="" />
+        <!-- description shown in the actual shared post -->
+        <meta property="og:image" content="" />
+        <!-- image link, make sure it's jpg -->
+        <meta property="og:url" content="" />
+        <!-- where do you want your post to link to -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <!-- to have large image post format in Twitter -->
+    
+        <!-- Webpage Title -->
+        <title>Login - SPark: Smart Parking</title>
+    
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="./css/bootstrap.min.css" rel="stylesheet" />
+        <link href="./css/fontawesome-all.min.css" rel="stylesheet" />
+        <link href="./css/aos.min.css" rel="stylesheet" />
+        <link href="./css/swiper.css" rel="stylesheet" />
+        <link href="./css/style.css" rel="stylesheet" />
+    
+        <link rel="stylesheet" href="/css/app.css">
+        <script src="/js/app.js"></script>
+    
+        <!-- Favicon -->
+        <link rel="icon" href="./assets/images/favicon.png" />
+      </head>
+      <body>
+        <div>
+          <nav
+            id="navbar"
+            class="navbar navbar-expand-lg fixed-top navbar-dark"
+            aria-label="Main navigation"
+          >
+            <div class="container">
+              <!-- Image Logo -->
+              <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
+    
+              <!-- Text Logo - Use this if you don't have a graphic logo -->
+              <a class="navbar-brand logo-text logo-image" href="/"
+                ><img src="/assets/images/favicon.png" alt="" class="img-fluid" />
+                SPark: Smart Parking System</a
+              >
+    
+              <button
+                class="navbar-toggler p-0 border-0"
+                type="button"
+                id="navbarSideCollapse"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <div
+                class="navbar-collapse offcanvas-collapse"
+                id="navbarsExampleDefault"
+              >
+                <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                  <li class="nav-item">
+                    <a class="nav-link scrollto active" href="/#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link scrollto" href="/#about">Map</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link scrollto" href="/#menu">System</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About Us</a>
+                  </li>
+                </ul>
+                <span class="nav-item social-icons">
+                  <span class="fa-stack">
+                    <a href="https://www.facebook.com/CMTagum" target="_blank">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-facebook-f fa-stack-1x"></i>
+                    </a>
+                  </span>
+                </span>
+              </div>
+              <!-- end of navbar-collapse -->
+            </div>
+            <!-- end of container -->
+          </nav>
+          <!-- end of navbar -->
+          <!-- end of navigation -->
+    
+          <!-- Home -->
+          <center>
+            <section class="home py-5 d-flex align-items-center" id="#Home">
+              <div class="container text-light py-5" data-aos="zoom-in">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br />
+              </div>
+              <!-- end of container -->
+            </section>
+            <!-- end of home -->
+          </center>
+    
+          <!-- Information -->
+          <section style="background-color: #212D37; height: 500px">
+            <div class="p-3 pt-5 m-0 text-center">
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4 bg-dark rounded p-4">
+                        <h3 class="mb-3 text-white">Login</h3>
+                        <% if(message != null) { %>
+                          <div class="alert alert-danger" role="alert">
+                            Incorrect Username or Password
+                          </div>
+                        <% } %>
+                        <form action="/login" method="POST">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Username</label>
+                              <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                            </div>
+                            <button type="submit" class="text-white btn-secondary mt-3">Submit</button>
+                          </form>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+            <!-- end of container -->
+          </section>
+          <!-- end of about -->
+          <!-- end of bottom -->
+    
+          <!-- Scripts -->
+          <script src="/js/bootstrap.min.js"></script>
+          <!-- Bootstrap framework -->
+          <script src="/js/purecounter.min.js"></script>
+          <!-- Purecounter counter for statistics numbers -->
+          <script src="/js/swiper.min.js"></script>
+          <!-- Swiper for image and text sliders -->
+          <script src="/js/aos.js"></script>
+          <!-- AOS on Animation Scroll -->
+          <script src="/js/script.js"></script>
+          <!-- Custom scripts -->
+          <script>
+            // Tabbed Menu
+            function openMenu(evt, menuName) {
+              var i, x, tablinks;
+              x = document.getElementsByClassName("menu");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablink");
+              for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(
+                  " w3-red",
+                  ""
+                );
+              }
+              document.getElementById(menuName).style.display = "block";
+              evt.currentTarget.firstElementChild.className += " w3-black";
+            }
+            document.getElementById("myLink").click();
+          </script>
+        </div>
+      </body>
+</html>
