@@ -74,7 +74,7 @@ app.post('/get-data', async (req, res) => {
 
 app.post('/upload-data', express.json(), express.urlencoded(), async (req, res) => {
     var dataObj = await req.query
-    console.log(dataObj)
+    //console.log(dataObj)
     var names = Object.keys(dataObj)
     var newData = await setData(names, dataObj)
     saveData(newData)
@@ -262,7 +262,7 @@ function getRecord(){
     }
     var data = fs.readFileSync('./record.txt', 'utf8').split("\n")
     if(data == ''){
-        console.log('No record')
+        //console.log('No record')
         return null;
     }
     var arrObj = arrayToObject(data)
